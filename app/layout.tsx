@@ -16,13 +16,15 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 };
 
-
-
-export default function RootLayout({children}: {children: React.ReactNode;}) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       {/* <body >{children}</body> */}
-      <CssBaseline />
+
       <body className={`${inter.className}`}>{children}</body>
     </html>
   );
