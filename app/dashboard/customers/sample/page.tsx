@@ -11,7 +11,7 @@ const Page: React.FC = () => {
       <CustomTypography
         variant="body1"
         fontSize={12}
-        color="#000000" // 色コードは`#`を含めて正確に指定
+        color="#000000    " // 色コードは`#`を含めて正確に指定
         fontFamily="Noto Sans JP"
       >
         ふりがな想定
