@@ -1,23 +1,48 @@
-// 'use client';
-import { Ratings } from '@/app/ui/customers/Ratings';
-import { Typography } from '@mui/material';
-// import { CustomersTable } from '@/app/ui/customers/table';
-import Table from '@/app/ui/customers/table';
-import { CustomersTableType } from '@/app/lib/definitions';
+'use client';
+
+import { TestBox } from '@/app/global';
+import { Box, useMediaQuery } from '@mui/material';
 
 export default function Page() {
+  const isSmallDevice = useMediaQuery('(max-width: 768px)');
+
   return (
     <>
-      <Typography
-        // variant='h1'
-        fontSize={50} //px
-        color={'#f34'} //色(多分props色も可変できる。css in jsかなんかしらで)
+      {/* useMediaQueryでコンポーネントの出しわけ */}
+      {/* {isSmallDevice ? (
+        <Box sx={{ backgroundColor: 'red', color: 'white' }} width={'500px'}>
+          header
+        </Box>
+      ) : (
+        <Box
+          sx={{
+            backgroundColor: 'red',
+            color: 'white',
+            writingMode: 'vertical-rl',
+          }}
+          height={'500px'}
+        >
+          header
+        </Box>
+      )} */}
+      {/* MUIのthemeを使って切り替え */}
+      {/* デフォのthemeが生きる */}
+      {/* <Box
+        sx={{
+          backgroundColor: { sm: 'blue', lg: 'yellow', xl: 'green' },
+          color: { sm: 'white', lg: 'black', xl: 'white' },
+        }}
+        width={'100vw'}
       >
-        トライ1
-      </Typography>
-      <Ratings />
-      <Table customers={[]} />
-      
+        a
+      </Box> */}
+      {/* style.tsに逃す */}
+      <TestBox>a</TestBox>
     </>
   );
 }
+
+/*
+useMediaQuery：コンポーネントの出しわけで使う
+
+*/
