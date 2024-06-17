@@ -1,4 +1,3 @@
-// TODO 'use client'って書いてない場合
 'use server';
 import { sql } from '@vercel/postgres';
 import { revalidatePath } from 'next/cache';
@@ -26,8 +25,6 @@ export async function authenticate(
     throw error;
   }
 }
-
-
 
 const FormSchema = z.object({
   id: z.string(),
