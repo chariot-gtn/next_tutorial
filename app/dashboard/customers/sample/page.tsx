@@ -1,7 +1,6 @@
 import CustomTypography from '@/app/ui/customers/typography'; // パスは適宜調整してください
 import Link from '@mui/material/Link';
 import { Ratings } from '@/app/ui/customers/Ratings'; // Ratingsコンポーネントの正確なパスに置き換えてください
-import { ContainedButtons } from '@/app/ui/customers/Button';
 import LocalPrintshopIcon from '@mui/icons-material/LocalPrintshop';
 import { Button } from '@mui/material';
 
@@ -21,7 +20,7 @@ const Page: React.FC = () => {
         参加者の名前
       </Link>
       <Ratings />
-      <ContainedButtons />
+
       <Button />
       <LocalPrintshopIcon fontSize="large" />
     </>
